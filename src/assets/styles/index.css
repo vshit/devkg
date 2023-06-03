@@ -1,0 +1,32 @@
+@import './reset.css';
+@import './variables.css';
+
+.app {
+	font-family: 'proxima-nova', sans-serif;
+	color: var(--primary-color);
+}
+
+.container {
+    max-width: 1176px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+button {
+	font-weight: 700;
+	font-size: 14px;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 0.03em;
+	height: 38px;
+	line-height: 38px;
+	padding: 0 25px;
+	min-width: 145px;
+	text-decoration: none;
+	transition: all 0.2s;
+	border: none;
+	cursor: pointer;
+	outline: none;
+    background-color: var(--info-color);
+    color: var(--light-color);
+}
