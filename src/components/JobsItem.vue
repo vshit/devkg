@@ -4,9 +4,10 @@
 		:class="{
 			unactive: job.is_archived,
 		}"
-		:to="`job/${job.slug}`"
+		:to="`/job/${job.slug}`"
 	>
-		<img :src="`https://devkg.com/${job.organization_icon}`" alt="" />
+		<span class="gradient" v-if="!job.organization_icon"></span>
+		<img class='icon' v-else :src="`https://devkg.com/${job.organization_icon}`" alt="" />
 		<div class="job_info">
 			<h6>Компания</h6>
 			<p>{{ job.organization_name }}</p>
@@ -86,5 +87,23 @@ export default {
 
 .job_info {
 	width: 255px;
+}
+
+.gradient {
+    border-radius: 8px;
+	margin-left: 38px;
+	margin-right: 10px;
+	display: block;
+	width: 32px;
+	height: 32px;
+	background: linear-gradient(
+		147.89deg,
+		rgb(189, 255, 0) -31.07%,
+		rgba(0, 99, 46, 0.7) 128.49%
+	);
+}
+
+.icon {
+    border-radius: 8px;
 }
 </style>

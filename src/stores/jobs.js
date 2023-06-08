@@ -26,9 +26,11 @@ export const useJobsStore = defineStore('jobsStore', {
 		},
 		incrementPage() {
 			this.page += 1
+            this.fetchJobs()
 		},
 		decrementPage() {
 			this.page -= 1
+            this.fetchJobs()
 		},
 	},
 })

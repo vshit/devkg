@@ -6,10 +6,11 @@ export function getWorkType(type) {
 			return 'Удаленная работа'
 		case 'internship':
 			return 'Стажировка'
-		case 'relocation':
+		case 'relocate':
 			return 'Релокация'
+		case 'project':
+			return 'Проект'
 		default:
 			return ''
 	}
 }
-

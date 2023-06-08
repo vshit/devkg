@@ -2,6 +2,9 @@ export function getSalary(job) {
 	if (job.salary === 'unpaid') {
 		return 'Неоплачиваемая'
 	}
+    if (job.type === 'project') {
+        return `${job.price_from} ${getCurrency(job.currency)} за проект`
+    }
 
 	let result = ''
 
