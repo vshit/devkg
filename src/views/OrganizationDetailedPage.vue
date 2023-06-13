@@ -28,6 +28,12 @@
 						<JobsItem :job="job" v-for="job in jobs" :key="job.id" />
 					</div>
 				</div>
+                <div v-if="events.length > 0" class="vacancies">
+					<h2>Мероприятия</h2>
+					<div class="vacancies_list">
+						<EventItem :event="event" v-for="event in events" :key="event.id" />
+					</div>
+				</div>
 			</slot>
 		</div>
 	</div>
@@ -38,6 +44,7 @@ import { mapActions, mapState } from 'pinia'
 import { useOrganizationStore } from '../stores/organization'
 import Description from '../components/Description.vue'
 import JobsItem from '../components/JobsItem.vue'
+import EventItem from '../components/EventItem.vue'
 
 export default {
 	computed: {
@@ -59,6 +66,7 @@ export default {
 	components: {
 		Description,
 		JobsItem,
+        EventItem
 	},
 }
 </script>

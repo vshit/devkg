@@ -11,6 +11,7 @@
 					/>
 				</div>
 				<Pagination
+					:limit="20"
 					:page="page"
 					:length="organizations.length"
 					:prevPage="decrementPage"

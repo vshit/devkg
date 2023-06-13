@@ -1,7 +1,7 @@
 <template>
 	<div class="paginantion">
 		<button @click="prevPage()" v-show="page > 1">Предыдущая страница</button>
-		<button @click="nextPage()" v-show="length === 20">
+		<button @click="nextPage()" v-show="length === limit">
 			Следущая страница
 		</button>
 	</div>
@@ -26,6 +26,10 @@ export default {
         length: {
             type: Number,
             required: true,
+        },
+        limit: {
+            type: Number,
+            required: true
         }
     }
 }

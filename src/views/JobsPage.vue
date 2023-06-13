@@ -8,6 +8,7 @@
 					<JobsItem v-for="job in jobs" :key="job.id" :job="job" />
 				</div>
                 <Pagination
+                    :limit='20'
 					:page="page"
 					:length="jobs.length"
 					:prevPage="decrementPage"
