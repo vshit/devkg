@@ -13,11 +13,11 @@ const OrganizationsPageAsync = defineAsyncComponent(() =>
 const OrganizationDetailedPageAsync = defineAsyncComponent(() =>
 	import('../views/OrganizationDetailedPage.vue')
 )
-const EventsPageAsync = defineAsyncComponent(()=> 
-    import('../views/EventsPage.vue')
+const EventsPageAsync = defineAsyncComponent(() =>
+	import('../views/EventsPage.vue')
 )
-const EventDetailedPageAsync = defineAsyncComponent(()=>
-    import('../views/EventDetailedPage.vue')
+const EventDetailedPageAsync = defineAsyncComponent(() =>
+	import('../views/EventDetailedPage.vue')
 )
 
 export const routes = [
@@ -25,7 +25,7 @@ export const routes = [
 	{ path: '/job/:slug', component: JobDetailedPageAsync },
 	{ path: '/organizations', component: OrganizationsPageAsync },
 	{ path: '/organizations/:slug', component: OrganizationDetailedPageAsync },
-    { path: '/events', component: EventsPageAsync },
+	{ path: '/events', component: EventsPageAsync },
 	{ path: '/events/:slug', component: EventDetailedPageAsync },
 ]
 

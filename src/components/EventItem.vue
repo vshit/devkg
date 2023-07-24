@@ -13,7 +13,7 @@
 				</div>
 				<div class="info_item">
 					<h6>Локация</h6>
-					<p>{{ event.location }}</p>
+					<p>{{ getLocation() }}</p>
 				</div>
 			</div>
 		</div>
@@ -37,6 +37,13 @@ export default {
 		getFormattedTime() {
 			return getFormattedTime(this.event.date.toString())
 		},
+		getLocation() {
+			if (this.event.event_type === 'online') {
+				return 'Онлайн'
+			}
+
+			return this.event.location
+		},
 	},
 }
 </script>
@@ -48,8 +55,8 @@ export default {
 	position: relative;
 	margin-bottom: 20px;
 	color: #fff;
-    justify-content: space-between;
-    flex-direction: column;
+	justify-content: space-between;
+	flex-direction: column;
 }
 .cover {
 	position: absolute;
@@ -72,44 +79,44 @@ export default {
 }
 .head {
 	padding: 29px 37px;
-    font-weight: 300;
-    font-style: italic;
+	font-weight: 300;
+	font-style: italic;
 }
 .content {
-    display: flex;
-    width: 100%;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    padding: 29px 37px;
+	display: flex;
+	width: 100%;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	padding: 29px 37px;
 }
 .content h5 {
-    font-size: 34px;
-    letter-spacing: .03em;
-    padding-right: 80px;
-    flex: 1 1 100%;
-    margin-bottom: 20px;
+	font-size: 34px;
+	letter-spacing: 0.03em;
+	padding-right: 80px;
+	flex: 1 1 100%;
+	margin-bottom: 20px;
 }
 .info {
-    display: flex;
-    width: 100%;
-    align-items: flex-end;
-    flex-wrap: wrap;
+	display: flex;
+	width: 100%;
+	align-items: flex-end;
+	flex-wrap: wrap;
 }
 .info_item {
-    min-width: 143px;
-    max-width: 281px;
-    margin-right: 20px;
-    min-height: 64px;
-    line-height: normal;
-    font-size: 18px;
-    letter-spacing: .03em;
+	min-width: 143px;
+	max-width: 281px;
+	margin-right: 20px;
+	min-height: 64px;
+	line-height: normal;
+	font-size: 18px;
+	letter-spacing: 0.03em;
 }
 .info_item h6 {
-    display: block;
-    font-size: 14px;
-    letter-spacing: .03em;
-    font-weight: 300;
-    margin-top: 5px;
-    margin-bottom: 2px;
+	display: block;
+	font-size: 14px;
+	letter-spacing: 0.03em;
+	font-weight: 300;
+	margin-top: 5px;
+	margin-bottom: 2px;
 }
 </style>
